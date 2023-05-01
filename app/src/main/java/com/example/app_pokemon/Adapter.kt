@@ -29,7 +29,7 @@ class Adapter (val context: Context) : ListAdapter<Equipo, Adapter.ViewHolder>(D
             val image = when(equipo.pais) {
                 Pais.ARGENTINA-> R.drawable.argentina
                 Pais.BRASIL-> R.drawable.brazil
-                Pais.INGLATERRA-> R.drawable.brazil
+                Pais.INGLATERRA-> R.drawable.inglaterra
 
 
             }
@@ -37,7 +37,7 @@ class Adapter (val context: Context) : ListAdapter<Equipo, Adapter.ViewHolder>(D
             imagenPais.setImageResource(image)
 
 
-
+            //LIBRERIA PARA PODER TRAER LAS FOTOS DE INTERNET
             Glide.with(context)
                 .load(equipo.url)
                 .into(logo)
@@ -45,6 +45,8 @@ class Adapter (val context: Context) : ListAdapter<Equipo, Adapter.ViewHolder>(D
             view.setOnClickListener {
                 onItemClickListener(equipo)
             }
+
+
         }
     }
 

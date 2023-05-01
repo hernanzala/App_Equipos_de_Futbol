@@ -3,8 +3,10 @@ package com.example.app_pokemon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +26,14 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         adapter.submitList(getListadoEquipo())
+        
+        adapter.onItemClickListener = {equipo ->
+            val intent = Intent(this,DetailActivity::class.java)
+            intent.putExtra("name",equipo.name)
+            intent.putExtra("url",equipo.url)
+            startActivity(intent)
+
+        }
 
 
 
@@ -35,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             Equipo(1,
                 "Boca",
                 7,
-                Pais.BRASIL,
+                Pais.ARGENTINA,
                 "https://upload.wikimedia.org/wikipedia/commons/7/7d/BocaJuniors.png"
             ),
             Equipo(2,
@@ -43,6 +53,36 @@ class MainActivity : AppCompatActivity() {
                 6,
                 Pais.ARGENTINA,
                 "https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_River_Plate.png"
+            ),
+            Equipo(3,
+                "Palmeiras",
+                3,
+                Pais.BRASIL,
+                "https://logodownload.org/wp-content/uploads/2015/05/palmeiras-logo-0.png"
+            ),
+            Equipo(4,
+                "Manchester United",
+                6,
+                Pais.INGLATERRA,
+                "https://logowik.com/content/uploads/images/862_manchester_united_fc.jpg"
+            ),
+            Equipo(5,
+                "Corinthians",
+                4,
+                Pais.BRASIL,
+                "https://logodownload.org/wp-content/uploads/2016/11/corinthians-logo-0.png"
+            ),
+            Equipo(6,
+                "Liverpool",
+                1,
+                Pais.INGLATERRA,
+                "https://logodownload.org/wp-content/uploads/2017/02/Liverpool-logo-0.png"
+            ),
+            Equipo(7,
+                "Tottenham",
+                6,
+                Pais.INGLATERRA,
+                "https://logodownload.org/wp-content/uploads/2018/11/tottenham-logo-escudo.png"
             ),
 
         )
