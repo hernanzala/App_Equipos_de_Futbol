@@ -1,10 +1,11 @@
-package com.example.app_pokemon
+package com.example.app_clubes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.example.app_pokemon.R
 
 class DetailActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.app_pokemon
+package com.example.app_clubes
 
 data class Equipo(
     val id: Int,
