@@ -22,7 +22,7 @@ class Adapter (val context: Context) : ListAdapter<Equipo, Adapter.ViewHolder>(D
         private val imagenPais: ImageView = view.findViewById(R.id.imageViewPais)
 
         fun bind (equipo: Equipo) {
-            name.text = "Nombre " + equipo.name.toString()
+            name.text = equipo.name.toString()
             campeonato.text = "Campeonato: " + equipo.campeonatos.toString()
 
 

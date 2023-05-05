@@ -34,10 +34,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
-
-
     }
 
     private fun getListadoEquipo(): MutableList<Equipo>? {
