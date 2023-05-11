@@ -3,6 +3,7 @@ package com.example.app_clubes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_pokemon.R
@@ -14,8 +15,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: Adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val screenSplash = installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Thread.sleep(3000)
+        screenSplash.setKeepOnScreenCondition{ false }
 
         recyclerView = findViewById(R.id.RecyclerViewClubes)
         recyclerView.layoutManager = LinearLayoutManager(this) //Muestra uno debajo de otro

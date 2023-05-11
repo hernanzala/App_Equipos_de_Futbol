@@ -13,4 +13,11 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/teal_700</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/futbol</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.App_Pokemon</item>
+    </style>
 </resources>
